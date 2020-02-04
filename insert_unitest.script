@@ -1,0 +1,7 @@
+echo "Sorting file based of first column" 
+sort -s -n -k 1,1 ./small/smallGraph.txt > newSorted.txt
+#sort -s -n -k 1,1 graphINCOMING_REVERSED.txt > REVERSEDSorted.txt
+echo "Comparing two files :: outcoming"
+diff --speed-large-files -w newSorted.txt graphOUTCOMING.txt
+#echo "Comparing two files :: incoming"
+#diff --speed-large-files -w newSorted.txt REVERSEDSorted.txt 
